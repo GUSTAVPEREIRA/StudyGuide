@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -7,6 +7,11 @@
   <ItemGroup>
     <Folder Include="IServices\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudyGuide.Infra.Data\StudyGuide.Infra.Data.csproj" />
+    <ProjectReference Include="..\StudyGuide.Model\StudyGuide.Model.csproj" />
   </ItemGroup>
 
 </Project>

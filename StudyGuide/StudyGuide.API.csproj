@@ -17,4 +17,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StudyGuide.Initializer\StudyGuide.Initializer.csproj" />
+  </ItemGroup>
+
 </Project>
