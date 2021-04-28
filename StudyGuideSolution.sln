@@ -23,13 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.Initializer", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastruct", "Infrastruct", "{5B2DE4D2-BA6A-4FBE-AF60-B1C355B85472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.Infra.Data", "StudyGuide.Infra.Data\StudyGuide.Infra.Data.csproj", "{5A33C95D-E9A5-40A9-AF61-FED752618A76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.Infra.Data", "StudyGuide.Infra.Data\StudyGuide.Infra.Data.csproj", "{5A33C95D-E9A5-40A9-AF61-FED752618A76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.Infra.Repositories", "StudyGuide.Infra.Repositories\StudyGuide.Infra.Repositories.csproj", "{378141CC-9FC3-4B00-A8BB-64A7E07EF036}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.Infra.Repositories", "StudyGuide.Infra.Repositories\StudyGuide.Infra.Repositories.csproj", "{378141CC-9FC3-4B00-A8BB-64A7E07EF036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.DTO", "StudyGuide.DTO\StudyGuide.DTO.csproj", "{13ACBF70-3732-4F46-97C0-CCBA2B0698BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.DTO", "StudyGuide.DTO\StudyGuide.DTO.csproj", "{13ACBF70-3732-4F46-97C0-CCBA2B0698BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.MappingDTO", "StudyGuide.MappingDTO\StudyGuide.MappingDTO.csproj", "{3F69F074-8BB9-403A-BBDF-509D9DDF1F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.MappingDTO", "StudyGuide.MappingDTO\StudyGuide.MappingDTO.csproj", "{3F69F074-8BB9-403A-BBDF-509D9DDF1F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.Cryptographic", "StudyGuide.Cryptographic\StudyGuide.Cryptographic.csproj", "{19161A45-05DE-4FF2-BC2C-0773F2534F5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{3F69F074-8BB9-403A-BBDF-509D9DDF1F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F69F074-8BB9-403A-BBDF-509D9DDF1F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F69F074-8BB9-403A-BBDF-509D9DDF1F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{378141CC-9FC3-4B00-A8BB-64A7E07EF036} = {5B2DE4D2-BA6A-4FBE-AF60-B1C355B85472}
 		{13ACBF70-3732-4F46-97C0-CCBA2B0698BB} = {0092E2DB-F5EE-4AED-B76E-E7DA5A26D892}
 		{3F69F074-8BB9-403A-BBDF-509D9DDF1F28} = {0092E2DB-F5EE-4AED-B76E-E7DA5A26D892}
+		{19161A45-05DE-4FF2-BC2C-0773F2534F5D} = {C78B5AA4-5BAE-4F3E-907E-D0293E74B04D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9B40302-97EF-42E7-A362-2BE034D4B08D}
