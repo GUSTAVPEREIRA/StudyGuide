@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="User\" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <ProjectReference Include="..\StudyGuide.DTO\StudyGuide.DTO.csproj" />
+    <ProjectReference Include="..\StudyGuide.Model\StudyGuide.Model.csproj" />
   </ItemGroup>
 
 </Project>

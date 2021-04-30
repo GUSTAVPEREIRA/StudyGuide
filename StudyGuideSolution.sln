@@ -33,6 +33,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudyGuide.MappingDTO", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.Cryptographic", "StudyGuide.Cryptographic\StudyGuide.Cryptographic.csproj", "{19161A45-05DE-4FF2-BC2C-0773F2534F5D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA96B3D9-1D6B-47EF-B772-F2959668D285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyGuide.Test", "StudyGuide.Test\StudyGuide.Test.csproj", "{88AE2D90-ACAB-43F2-ABAC-02B8763CF350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,10 @@ Global
 		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19161A45-05DE-4FF2-BC2C-0773F2534F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88AE2D90-ACAB-43F2-ABAC-02B8763CF350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AE2D90-ACAB-43F2-ABAC-02B8763CF350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AE2D90-ACAB-43F2-ABAC-02B8763CF350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AE2D90-ACAB-43F2-ABAC-02B8763CF350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +102,7 @@ Global
 		{13ACBF70-3732-4F46-97C0-CCBA2B0698BB} = {0092E2DB-F5EE-4AED-B76E-E7DA5A26D892}
 		{3F69F074-8BB9-403A-BBDF-509D9DDF1F28} = {0092E2DB-F5EE-4AED-B76E-E7DA5A26D892}
 		{19161A45-05DE-4FF2-BC2C-0773F2534F5D} = {C78B5AA4-5BAE-4F3E-907E-D0293E74B04D}
+		{88AE2D90-ACAB-43F2-ABAC-02B8763CF350} = {FA96B3D9-1D6B-47EF-B772-F2959668D285}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9B40302-97EF-42E7-A362-2BE034D4B08D}

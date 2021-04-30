@@ -38,8 +38,9 @@ namespace StudyGuide
         {
             services.AddServices();
             services.AddRepositories();
-
+            services.AddMappingDTO();
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudyGuide", Version = "v1" });
