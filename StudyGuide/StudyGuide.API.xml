@@ -4,6 +4,24 @@
         <name>StudyGuide.API</name>
     </assembly>
     <members>
+        <member name="T:StudyGuide.API.Controllers.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StudyGuide.API.Controllers.UserController.#ctor(StudyGuide.Services.IServices.Users.IUserService)">
+            <summary>
+            
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:StudyGuide.API.Controllers.UserController.CreateUser(StudyGuide.DTO.User.UserDTO)">
+            <summary>
+            
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
         <member name="T:StudyGuide.Program">
             <summary>
             

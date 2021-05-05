@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using StudyGuide.Services.IServices.User;
-using StudyGuide.Services.Services.User;
+using StudyGuide.Services.IServices.Users;
+using StudyGuide.Services.Services.Users;
 
 namespace StudyGuide.Initializer
 {

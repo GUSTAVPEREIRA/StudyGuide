@@ -10,13 +10,19 @@ namespace StudyGuide.Infra.Data
         public DbSet<User> TbUsers;
 
         public ApplicationContext(DbContextOptions options) : base(options)
-        {
-
+        {            
+            
         }
 
-        protected ApplicationContext(ModelBuilder builder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
             new UserMapping().Mapping(ref builder);
+
 
             base.OnModelCreating(builder);
         }

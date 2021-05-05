@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using StudyGuide.Infra.Repositories.IRepositories.Users;
+using StudyGuide.Infra.Repositories.Repositories.Users;
 
 namespace StudyGuide.Initializer
 {
@@ -6,7 +8,7 @@ namespace StudyGuide.Initializer
     {
         public static void AddRepositories(this IServiceCollection serviceColletion)
         {
-            //serviceColletion.AddScoped<IRepository, Repository>();
+            serviceColletion.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }

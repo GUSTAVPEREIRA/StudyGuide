@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IRepositories\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\StudyGuide.Infra.Data\StudyGuide.Infra.Data.csproj" />
+    <ProjectReference Include="..\StudyGuide.Model\StudyGuide.Model.csproj" />
   </ItemGroup>
 
 </Project>

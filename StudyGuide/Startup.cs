@@ -1,13 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using StudyGuide.Infra.Data;
 using StudyGuide.Initializer;
-using System;
 
 namespace StudyGuide
 {
@@ -36,6 +34,7 @@ namespace StudyGuide
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddInfrastructure(Configuration);
             services.AddServices();
             services.AddRepositories();
             services.AddMappingDTO();
@@ -44,26 +43,6 @@ namespace StudyGuide
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudyGuide", Version = "v1" });
-            });
-
-            var sqlServer = Configuration.GetSection("ConnectionStrings:SQLServer").Value;
-            var postgreSQL = Configuration.GetSection("ConnectionStrings:PostgreSQL").Value;
-
-            if (string.IsNullOrEmpty(sqlServer.Trim()) && string.IsNullOrEmpty(postgreSQL.Trim()))
-            {
-                throw new Exception("Por favor, configure o acesso ao banco de dados!");
-            }
-
-            services.AddDbContext<ApplicationContext>(options =>
-            {
-                if (!string.IsNullOrEmpty(sqlServer))
-                {
-                    options.UseSqlServer(sqlServer);
-                }
-                else
-                {
-                    options.UseNpgsql(postgreSQL);
-                }
             });
         }
 

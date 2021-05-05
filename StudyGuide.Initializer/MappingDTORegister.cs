@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using StudyGuide.MappingDTO.UserMapping;
+using System.Reflection;
 
 namespace StudyGuide.Initializer
 {
@@ -14,7 +15,7 @@ namespace StudyGuide.Initializer
             });
 
             //Don't remove this line below, because it's used for register the autoMapper
-            service.AddSingleton(mappingConfig);
+            service.AddSingleton(mappingConfig.CreateMapper());
         }
     }
 }

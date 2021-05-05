@@ -1,8 +1,10 @@
 ﻿using StudyGuide.Cryptographic;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudyGuide.Model.Users
 {
+    [Table("TbUsers")]
     public class User
     {
         public User()
