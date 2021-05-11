@@ -6,9 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using StudyGuide.Infra.Data;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StudyGuide
 {
@@ -31,8 +28,20 @@ namespace StudyGuide
 
                 try
                 {
-                    var context = services.GetRequiredService<PostgresApplicationContext>();
-                    context.Database.Migrate();
+                    var configuration = services.GetRequiredService<IConfiguration>();
+                    var sqlServer = configuration.GetSection("ConnectionStrings:SQLServer").Value;
+                    var postgreSQL = configuration.GetSection("ConnectionStrings:PostgreSQL").Value;
+
+                    if (!string.IsNullOrEmpty(sqlServer))
+                    {
+                        var context = services.GetRequiredService<ApplicationContext>();
+                        context.Database.Migrate();
+                    }
+                    else
+                    {
+                        var context = services.GetRequiredService<ApplicationContext>();
+                        context.Database.Migrate();
+                    }
                 }
                 catch (Exception ex)
                 {

@@ -4,6 +4,25 @@
         <name>StudyGuide.API</name>
     </assembly>
     <members>
+        <member name="T:StudyGuide.API.Controllers.AuthenticateController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StudyGuide.API.Controllers.AuthenticateController.#ctor(StudyGuide.Services.IServices.Token.ITokenService,StudyGuide.Services.IServices.Users.IUserService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenService"></param>
+            <param name="userService"></param>
+        </member>
+        <member name="M:StudyGuide.API.Controllers.AuthenticateController.Authenticate(StudyGuide.DTO.User.UserLoginDTO)">
+            <summary>
+            
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
         <member name="T:StudyGuide.API.Controllers.UserController">
             <summary>
             

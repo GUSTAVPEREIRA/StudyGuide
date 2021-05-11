@@ -1,7 +1,11 @@
-﻿namespace StudyGuide.Infra.Repositories.IRepositories
+﻿using StudyGuide.Infra.Data;
+
+namespace StudyGuide.Infra.Repositories.IRepositories
 {
     public interface IBaseRepository<T> where T : class
     {
+        public ApplicationContext Context { get; set; }
+
         public T Save(T t);
         public T FindById(int id);
         public bool Delete(T t);

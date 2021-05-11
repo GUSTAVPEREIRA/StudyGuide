@@ -7,7 +7,12 @@ namespace StudyGuide.Infra.Repositories.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        public PostgresApplicationContext Context { get; set; }
+        public ApplicationContext Context { get; set; }
+
+        public BaseRepository(ApplicationContext context)
+        {
+            Context = context;
+        }
 
         public virtual bool Delete(T t)
         {

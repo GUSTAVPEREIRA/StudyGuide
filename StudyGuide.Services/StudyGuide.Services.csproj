@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StudyGuide.DTO\StudyGuide.DTO.csproj" />
+    <ProjectReference Include="..\StudyGuide.Extensions\StudyGuide.Extensions.csproj" />
     <ProjectReference Include="..\StudyGuide.Infra.Data\StudyGuide.Infra.Data.csproj" />
     <ProjectReference Include="..\StudyGuide.Infra.Repositories\StudyGuide.Infra.Repositories.csproj" />
     <ProjectReference Include="..\StudyGuide.MappingDTO\StudyGuide.MappingDTO.csproj" />

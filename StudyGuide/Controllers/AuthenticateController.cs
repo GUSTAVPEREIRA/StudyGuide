@@ -1,26 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudyGuide.DTO.User;
 using StudyGuide.Extensions.Exceptions;
+using StudyGuide.Services.IServices.Token;
 using StudyGuide.Services.IServices.Users;
-using System;
 
 namespace StudyGuide.API.Controllers
-{
+{    
     /// <summary>
     /// 
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class AuthenticateController : ControllerBase
     {
+        private readonly ITokenService _tokenService;
         private readonly IUserService _userService;
 
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="tokenService"></param>
         /// <param name="userService"></param>
-        public UserController(IUserService userService)
+        public AuthenticateController(ITokenService tokenService, IUserService userService)
         {
+            _tokenService = tokenService;
             _userService = userService;
         }
 
@@ -29,18 +32,20 @@ namespace StudyGuide.API.Controllers
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns></returns>
-        [Route("create")]
-        [HttpPost]
-        public ActionResult<UserDTO> CreateUser(UserDTO userDTO)
+        [HttpPost] 
+        [Route("")]
+        public ActionResult<dynamic> Authenticate(UserLoginDTO userDTO)
         {
             try
             {
-                var result = _userService.CreateUser(userDTO);
+                var userActivated = _userService.GetUserByUsernameAndPassword(userDTO.Username, userDTO.Password);
+                var token = _tokenService.GenerateToken(userActivated);                
 
                 return new OkObjectResult(new
                 {
-                    User = result,
-                    Message = "Usuário criado com sucesso!"
+                    User = userActivated,
+                    BearerToken = token,
+                    Message = "Usuário autenticado!"
                 });
             }
             catch (APIException ex)
@@ -51,6 +56,8 @@ namespace StudyGuide.API.Controllers
                     Code = ex.StatusCode
                 });
             }
+            
+
         }
     }
 }

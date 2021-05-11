@@ -39,6 +39,7 @@ namespace StudyGuide
             services.AddRepositories();
             services.AddMappingDTO();
             services.AddControllers();
+            services.AddJWTBearerToken();
 
             services.AddSwaggerGen(c =>
             {
@@ -53,8 +54,6 @@ namespace StudyGuide
         /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors(options => options.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -64,6 +63,10 @@ namespace StudyGuide
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseCors(options => options.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

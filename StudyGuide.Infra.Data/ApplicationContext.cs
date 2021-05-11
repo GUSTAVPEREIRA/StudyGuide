@@ -7,16 +7,24 @@ namespace StudyGuide.Infra.Data
     public class ApplicationContext : DbContext
     {
         //Code example please use this logic
-        public DbSet<User> TbUsers;
+        public DbSet<User> TbUsers { get; set; }
 
-        public ApplicationContext(DbContextOptions options) : base(options)
-        {            
-            
+        public ApplicationContext()
+        {
+
+        }
+
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+        {
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            if (!optionsBuilder.IsConfigured)
+            {
+                base.OnConfiguring(optionsBuilder);
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

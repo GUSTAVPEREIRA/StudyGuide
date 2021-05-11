@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using StudyGuide.Services.IServices.Users;
-using StudyGuide.Services.Services.Users;
 
 namespace StudyGuide.Initializer
 {
@@ -8,7 +6,8 @@ namespace StudyGuide.Initializer
     {
         public static void AddServices(this IServiceCollection services)
         {
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<Services.IServices.Users.IUserService, Services.Services.Users.UserService>();
+            services.AddScoped<Services.IServices.Token.ITokenService, Services.Services.Token.TokenService>();
         }
     }
 }

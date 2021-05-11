@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using StudyGuide.MappingDTO.UserMapping;
-using System.Reflection;
 
 namespace StudyGuide.Initializer
 {
